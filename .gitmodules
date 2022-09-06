@@ -1,0 +1,3 @@
+[submodule "back-end/back-end/phase-3-sinatra-react-project"]
+	path = back-end/back-end/phase-3-sinatra-react-project
+	url = https://github.com/gladysndich/phase-3-sinatra-react-project.git
