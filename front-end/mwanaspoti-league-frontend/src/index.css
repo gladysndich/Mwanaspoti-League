@@ -1,13 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-image: url("./mwanaspoti_background.jpg");
+  background-repeat: none;
+  background-size: cover;
 }
+
+
+ul.navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f128;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #22b91d6b;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(85, 85, 85, 0.664);
+  color: white;
+}
+.text {
+  margin-right: 4rem;
+  margin-top: 6rem;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: rgb(19, 19, 8);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 7.5rem;
+  font-weight: bold;
+  text-align: right;
+  list-style: none;
+  opacity: .8;
+}
+
