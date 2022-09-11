@@ -1,18 +1,32 @@
 import React from "react";
 import Teams from "./Teams";
-import Header from "./Header";
+import {Link} from 'react-router-dom';
+
+
 
 function TeamsContainer({teams}){
+
+
     const renderTeams = () => {
         return teams.map(team => {
             return <Teams key={team.id} team={team} />
         })
     }
-
+    
+    
     return(
         <div>
-            <Header />
-            <ul>{renderTeams()}</ul>
+            <div className="teamsContainer">
+                <br></br>
+                <div class="container">
+                    {renderTeams()}
+                    <Link to="/teams/newteam">
+                        <button class="newTeam">New Team</button>
+                    </Link>
+                </div>
+            </div>
+            
+            
         </div>
     )
 }

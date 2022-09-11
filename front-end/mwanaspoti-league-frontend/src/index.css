@@ -11,32 +11,41 @@ body{
 }
 
 
-ul.navList {
+.appHeader {
   list-style-type: none;
   margin: 0;
   padding: 0;
   width: 15%;
-  background-color: #f1f1f128;
+  background-color: #eae6094b;
   position: fixed;
   height: 100%;
   overflow: auto;
+  font-family: 'Itim';
+  font-size: 30px;
 }
 
-li a {
+.appHeader {
   display: block;
   color: #000;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-li a.active {
-  background-color: #22b91d6b;
+.header {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+a {
   color: white;
 }
 
-li a:hover:not(.active) {
-  background-color: rgba(85, 85, 85, 0.664);
-  color: white;
+a:hover:not(.active) {
+  background-color: white;
+  color: #7DCE13;
 }
 .text {
   margin-right: 4rem;
@@ -44,12 +53,52 @@ li a:hover:not(.active) {
   position: absolute;
   top: 8px;
   right: 16px;
-  color: rgb(19, 19, 8);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 7.5rem;
+  color: #EAE509;
+  font-family: 'Itim';
+  font-size: 9.5rem;
   font-weight: bold;
   text-align: right;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   list-style: none;
-  opacity: .8;
+  
+}
+
+.newTeamForm{
+  float: right;
+  width: 60%;
+  padding-right: 300px;
+  font-family: 'Itim';
+  font-size: 30px;
+  
+}
+
+button{
+  background-color: #2B7A0B;
+  border: none;
+  font-size: 35px;
+  color: white;
+}
+
+button:hover{
+  background-color: white;
+  color: #2B7A0B;
+  border: none;
+}
+
+.teamsContainer{
+  list-style-type: none;
+  left: 300px;
+  width: 15%;
+  background-color: #eae6094b;
+  position: absolute;
+  height: 50%;
+  overflow: auto;
+  font-family: 'Itim';
+  font-size: 30px;
+}
+
+button.newTeam{
+  font-size: 20px;
+  float: right;
 }
 

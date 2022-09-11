@@ -1,17 +1,15 @@
-import React from 'react';
-import Header from './Header';
-
+import React from "react";
 
 function Home() {
     return(
-        <div className='home'>
-            <Header />
+        <div>
             <ul className="text">
                 <li>Mwanaspoti</li>
                 <li>League</li>
             </ul>
         </div>
-    )
+    );
+
 }
 
 export default Home;

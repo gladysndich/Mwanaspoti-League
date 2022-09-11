@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function NewTeamForm() {
+function NewTeamForm({handleAddTeam}) {
+
+    const [formData , setFormData ] = useState({
+        team_name: '',
+        coach_name: '',
+        player_1: '',
+        player_2: '',
+        player_3: '',
+        player_4: '',
+        player_5: ''
+    })
+
+    const handleSubmit = (e) => {
+        const newTeam = {...formData}
+        e.preventDefault()
+        handleAddTeam(newTeam)
+        reset()
+    }
+
+    const reset = () => {
+        setFormData({
+            team_name: '',
+            coach_name: '',
+            player_1: '',
+            player_2: '',
+            player_3: '',
+            player_4: '',
+            player_5: ''
+        })
+    }
     return(
-        <form class="row g-3">
+        <div className="newTeamForm">
+        <h1>New Team</h1>
+        <form class="row g-3" onSubmit={handleSubmit}>
             <div class="col-md-6">
                 <label for="new-team" class="form-label">Team Name</label>
                     <input type="team-name" class="form-control" id="new-team" />
@@ -32,9 +64,12 @@ function NewTeamForm() {
                     <input type="text" class="form-control" id="inputPlayers" placeholder="Player5" />
             </div>
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Add Team</button>
+                <Link to="/teams">
+                    <button type="submit" class="btn btn-primary" className="addTeam" onClick={handleAddTeam()}>Add Team</button>
+                </Link>
             </div>
         </form>
+        </div>
     );
 }
 
